@@ -41,6 +41,13 @@ const config = {
       fontSize: {
         32: "32px",
       },
+      colors: {
+        blackGray: "#1B1919",
+        brightYellow: "#FAAF3D",
+        paleGray: "#C6C5C5",
+        charcoalGray: "#ADADAD",
+        coolGray: "#BDBCBC",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

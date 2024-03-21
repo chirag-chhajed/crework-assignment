@@ -33,31 +33,33 @@ const MainMenu = () => {
   return (
     <div>
       {isDesktop ? (
-        <nav className="text-[#BDBCBC] text-xl font-normal">
+        <nav className="text-coolGray text-xl font-normal">
           <ul className="flex justify-between items-center gap-12">
             <li>
-              <Link href="#">30 Days of PM</Link>
+              <Link href="https://www.crework.in/30daysofpm">
+                30 Days of PM
+              </Link>
             </li>
             <li>
-              <Link href="#">Newsletter</Link>
+              <Link href="https://www.crework.in/newsletter">Newsletter</Link>
             </li>
             <li>
-              <Link href="#">Builders Cohort</Link>
+              <Link href="https://www.crework.in/builders">
+                Builders Cohort
+              </Link>
             </li>
           </ul>
         </nav>
       ) : (
-        <button type="button">
+        <button aria-label={isOpen ? "Close Menu" : "Open Menu"} type="button">
           {isOpen ? (
             <XIcon
               onClick={() => setIsOpen(false)}
-              aria-label="Close Menu"
               size={28}
               className="text-white"
             />
           ) : (
             <AlignJustify
-              aria-label="Open Menu"
               size={24}
               className="text-white"
               onClick={() => setIsOpen(true)}
@@ -68,7 +70,7 @@ const MainMenu = () => {
       <nav
         ref={menuRef}
         className={cn(
-          "absolute  inset-x-0 bg-[#1B1919] text-white text-xl transition-all duration-300",
+          "absolute  inset-x-0 bg-blackGray text-white text-xl transition-all duration-300",
           isOpen ? "top-28 opacity-100" : "-top-32 opacity-0",
           isDesktop && "hidden"
         )}

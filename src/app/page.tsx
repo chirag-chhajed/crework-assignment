@@ -1,18 +1,19 @@
 import MainMenu from "@/components/main-menu";
-import { AlignJustify } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import divider from "@/assets/divider.svg";
+import Data from "@/components/data";
 
 export default function Home() {
   return (
-    <div className="bg-[#1B1919] ">
+    <div className="bg-blackGray ">
       <header className="flex justify-between items-center px-5 py-8 lg:container">
         <h2 className="font-Montserrat text-[24px] md:text-[32px] text-white font-extrabold leading-normal ">
           Crework
-          <span className="text-[30px] md:text-[40px] text-[#FAAF3D]">.</span>
+          <span className="text-[30px] md:text-[40px] text-brightYellow">
+            .
+          </span>
         </h2>
-
         <MainMenu />
       </header>
       <div className="px-5 lg:container lg:px-24">
@@ -23,36 +24,37 @@ export default function Home() {
           <p className="text-white font-normal leading-5 text-sm md:text-base tagline">
             Browse 1000+ questions from top tech companies
           </p>
+          <Data />
         </section>
       </div>
       <footer className="py-8 px-14 flex flex-col items-center gap-6 md:grid md:grid-cols-3 md:gap-y-10">
         <h2 className="font-Montserrat text-[18px] md:text-[32px] text-white font-extrabold leading-normal text-center">
           Crework
-          <span className="text-[17.313px] text-[#FAAF3D] md:text-[40px]">
+          <span className="text-[17.313px] text-brightYellow md:text-[40px]">
             .
           </span>
         </h2>
         <div className="grid grid-cols-2 grid-rows-2 gap-y-4 gap-x-16">
           <Link
-            className="text-[#C6C5C5] text-sm leading-6 whitespace-nowrap"
+            className="text-charcoalGray text-sm leading-6 whitespace-nowrap"
             href={"#"}
           >
             About Us
           </Link>
           <Link
-            className="text-[#C6C5C5] text-sm leading-6 whitespace-nowrap"
+            className="text-charcoalGray text-sm leading-6 whitespace-nowrap"
             href={"#"}
           >
             Our Graduates
           </Link>
           <Link
-            className="text-[#C6C5C5] text-sm leading-6 whitespace-nowrap"
+            className="text-charcoalGray text-sm leading-6 whitespace-nowrap"
             href={"#"}
           >
             Curriculum
           </Link>
           <Link
-            className="text-[#C6C5C5] text-sm leading-6 whitespace-nowrap"
+            className="text-charcoalGray text-sm leading-6 whitespace-nowrap"
             href={"#"}
           >
             Refund Policy
@@ -77,7 +79,7 @@ export default function Home() {
               alt="behance logo"
             />
           </Link>
-          <Link href={"#"}>
+          <Link href={"https://www.linkedin.com/company/creworkhq/"}>
             <span className="sr-only">Linkedin Link</span>
             <Image
               src={"/linkedin.svg"}
@@ -101,7 +103,7 @@ export default function Home() {
           className="md:col-span-3 md:place-self-center"
           alt="divider"
         />
-        <p className="font-inter text-[#ADADAD] text-base font-medium leading-6 md:text-center md:col-span-3">
+        <p className="font-inter text-charcoalGray text-base font-medium leading-6 md:text-center md:col-span-3">
           Copyright &#169; {new Date().getFullYear()} Crework
         </p>
       </footer>
