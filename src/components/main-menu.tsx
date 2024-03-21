@@ -70,7 +70,7 @@ const MainMenu = () => {
       <nav
         ref={menuRef}
         className={cn(
-          "absolute  inset-x-0 bg-blackGray text-white text-xl transition-all duration-300",
+          "absolute  inset-x-0 bg-blackGray text-white text-xl transition-all duration-300 pb-12",
           isOpen ? "top-28 opacity-100" : "-top-32 opacity-0",
           isDesktop && "hidden"
         )}
