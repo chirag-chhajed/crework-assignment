@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crework Internship  Assignment
+
+The above assignment is deployed here <https://crework-assignment-two.vercel.app/>
 
 ## Getting Started
 
-First, run the development server:
+If you want to run the project locally, you can clone the repository and run this repo through two methods:
+
+### Method 1: Using nodejs
+
+1. Make sure you have nodejs installed in your system. If not, you can download it from [here](https://nodejs.org/en/download/).
+2. Go to the folder where you have cloned the repository.
+3. Run the following commands in the terminal:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dev 
+# or your preferred package manager
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Method 2: Using Docker
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Make sure you have docker installed in your system. If not, you can download it from [here](https://www.docker.com/products/docker-desktop).
+2. Go to the folder where you have cloned the repository.
+3. Run the following commands in the terminal:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+docker build -t crework-assignment .
+```
 
-## Learn More
+```bash
+docker run -p 3000:3000 crework-assignment
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- Tailwind CSS
+- TypeScript
+- RTK Query
+- Shadcn UI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- [x] Responsive Design
+- [x] Pagination through query params rather than state
+- [X] Skeleton Loading
+- [X] have added proper metadata instead of an Create Next App and vercel svg as favicon
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Images
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- LightHouse Score
+![Lighoutse Score](image.png)
+
+- Skeleton Loading
+![Skeleton Loading](image-1.png)
+
+- Mobile Demo
+![Mobile Demo](image-2.png)
+
+- Desktop Demo
+![Desktop Demo](image-3.png)
+
+Hope you like the assignment
