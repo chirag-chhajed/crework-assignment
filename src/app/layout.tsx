@@ -5,6 +5,12 @@ import "@fontsource/inter";
 import "@fontsource/red-hat-display";
 import "@fontsource/poppins";
 import { ReduxProvider } from "@/store/provider";
+import dynamic from "next/dynamic";
+import { PHProvider } from "./providers";
+
+const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "Crework",
@@ -33,9 +39,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReduxProvider>
-        <body>{children}</body>
-      </ReduxProvider>
+      <PHProvider>
+        <ReduxProvider>
+          <body>
+            {children}
+            <PostHogPageView />
+          </body>
+        </ReduxProvider>
+      </PHProvider>
     </html>
   );
 }
