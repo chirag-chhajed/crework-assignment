@@ -9,21 +9,21 @@ import dynamic from "next/dynamic";
 import { PHProvider } from "./providers";
 import { Montserrat, Inter, Red_Hat_Display, Poppins } from "next/font/google";
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--montserrat",
 });
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--inter",
 });
 
-export const redHatDisplay = Red_Hat_Display({
+const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
   variable: "--red-hat-display",
 });
 
-export const poppins = Poppins({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--poppins",
