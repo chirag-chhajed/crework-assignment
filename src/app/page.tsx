@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import divider from "@/assets/divider.svg";
 import Data from "@/components/data";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -25,9 +25,9 @@ export default function Home() {
           <p className="text-white font-normal leading-5 text-sm md:text-base tagline">
             Browse 1000+ questions from top tech companies
           </p>
-          <Suspense fallback={null}>
-            <Data />
-          </Suspense>
+          {/* <Suspense fallback={null}> */}
+          <Data />
+          {/* </Suspense> */}
         </section>
       </div>
       <footer className="py-8 px-14 flex flex-col items-center gap-6 md:grid md:grid-cols-3 md:gap-y-10">
