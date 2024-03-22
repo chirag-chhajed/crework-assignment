@@ -1,12 +1,33 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "@fontsource/montserrat";
-import "@fontsource/inter";
-import "@fontsource/red-hat-display";
-import "@fontsource/poppins";
+// import "@fontsource/montserrat";
+// import "@fontsource/inter";
+// import "@fontsource/red-hat-display";
+// import "@fontsource/poppins";
 import { ReduxProvider } from "@/store/provider";
 import dynamic from "next/dynamic";
 import { PHProvider } from "./providers";
+import { Montserrat, Inter, Red_Hat_Display, Poppins } from "next/font/google";
+
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--montserrat",
+});
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--inter",
+});
+
+export const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  variable: "--red-hat-display",
+});
+
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--poppins",
+});
 
 const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
   ssr: false,
@@ -38,7 +59,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      className={`${poppins.variable} ${montserrat.variable} ${redHatDisplay.variable} ${inter.variable}`}
+      lang="en"
+    >
       <PHProvider>
         <ReduxProvider>
           <body>

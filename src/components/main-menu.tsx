@@ -33,7 +33,7 @@ const MainMenu = () => {
   return (
     <div>
       {isDesktop ? (
-        <nav className="text-coolGray text-xl font-normal">
+        <nav className="text-coolGray text-xl font-normal font-inter">
           <ul className="flex justify-between items-center gap-12">
             <li>
               <Link href="https://www.crework.in/30daysofpm">

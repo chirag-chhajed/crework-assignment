@@ -18,10 +18,10 @@ const config = {
       },
     },
     fontFamily: {
-      sans: ["Poppins", "sans-serif"],
-      Montserrat: ["Montserrat", "sans-serif"],
-      redhat: ["Red Hat Display", "sans-serif"],
-      inter: ["Inter", "sans-serif"],
+      sans: ["var(--poppins)", "sans-serif"],
+      Montserrat: ["var(--montserrat)", "sans-serif"],
+      redhat: ["var(--red-hat-display)", "sans-serif"],
+      inter: ["var(--inter)", "sans-serif"],
     },
     extend: {
       keyframes: {
